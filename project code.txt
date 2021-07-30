@@ -1,0 +1,118 @@
+public class checkBox {
+
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\selinium\\google chrome\\chromedriver.exe");
+		
+		
+		
+		WebDriver driver =new ChromeDriver();
+		
+		
+	     driver.get("https://www.justdial.com/sideMenuarg0");//get the link
+	     
+	     
+	     //go to the recharge page
+		
+		                  WebElement recharge=driver.findElement(By.id("hotkeys_text_9"));
+		                  recharge.click();
+		
+
+		//paid options click
+		                  
+		          		WebElement paidOption=driver.findElement(By.name("mobile"));
+		        		paidOption.click();
+		        		System.out.println("readio button done");
+		        		
+		//mobile number 
+		        		WebElement mobileNumber=driver.findElement(By.id("num_rc_mob"));
+		                mobileNumber.sendKeys("9790261996");;
+		                System.out.println("mobile number send done");
+		                
+		
+		//plan offer
+		                WebElement plan=driver.findElement(By.id("amt_rc_mob"));
+		                plan.sendKeys("149");
+		                System.out.println("plan offer send done");
+		
+        //mail option
+		                
+		                WebElement mail=driver.findElement(By.id("mail_rc_mob"));
+		                 mail.sendKeys("abarnaanish1999@gmail.com");
+		                 System.out.println("mail send done");
+		                 
+		                 
+		                 
+		                 
+		                 
+		        		 //dth page
+		                 
+		                /* WebElement dth=driver.findElement(By.id("rc_dth_tab"));
+		                 dth.click();
+		                 
+		                 
+		                 WebElement obj=driver.findElement(By.id("shwlnk_optr_rc_dth"));
+		                 obj.click();
+		                 
+                         WebElement obj1=driver.findElement(By.xpath("//*[@id=\"rc_dth_optr_link_24\"]/span/span[2]"));
+                         Actions ac=new Actions(driver);
+                         ac.moveToElement(obj1).build().perform();
+                         ac.click();*/
+		                 
+		                 
+		                 
+		//directly select the network
+		                 
+		                 WebElement network=driver.findElement(By.xpath("//*[@id=\"links_rc_mob\"]/ul/li[6]/a"));
+		                 network.click();
+		                 System.out.println("pnetwork select done");
+		                 
+		                 
+		 //mobile number
+		                 WebElement num_rc_mob=driver.findElement(By.id("num_rc_mob"));
+		                 
+		                 num_rc_mob.sendKeys("9865812627");
+		                 
+		                 System.out.println("mobile no select done");
+		                 
+		//other details                 
+		                 
+		                 WebElement  amt_rc_mob=driver.findElement(By.id("amt_rc_mob"));
+		                 amt_rc_mob.sendKeys("249");
+		                  
+		                 WebElement mail1=driver.findElement(By.id("mail_rc_mob"));
+		                 mail1.sendKeys("abarnaanish1999@gmail.com");
+		                 
+		 //go to the next page
+		                 
+		                 
+		                 WebElement nextPage=driver.findElement(By.id("button_rc_mob"));
+		                 
+		                 Actions navi = new Actions( driver);
+		                 navi.moveToElement(nextPage).build().perform();
+		                 nextPage.click();
+		                 
+		                 System.out.println("next page navigated done");
+		                 
+		                 
+
+		                 
+		                 
+		                 
+		                 
+		                 
+		                 
+		//go to the contact us
+		                 
+		                 
+		                 WebElement contactus=driver.findElement(By.xpath("/html/body/div[4]/section[4]/div[13]/ul/li[5]/a"));
+		                 Actions act_9=new Actions(driver);
+		                 act_9.moveToElement(contactus).build().perform();
+		                 contactus.click();
+		                 System.out.println("contact us done");
+		                 
+		                 
+		//payment orders
+		                 
+		                 WebElement PaymentOptions=driver.findElement(By.xpath("/html/body/div[4]/div/ul/li[2]/a"));
+		                 PaymentOptions.click();
